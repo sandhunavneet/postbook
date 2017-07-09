@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+     </head>
+  <body>
+      <header>
+        <div class="margin">
+      <nav class="navbar navbar-default" id="header">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       
+      <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+      <a class="navbar-brand white-text"href="#"><img class="bin" src="data:image/png;base64,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"width="24px"height="24px"></a>
+      <form class="navbar-from navbar-left">
+        <div class="form-group">
+          <div class="search">
+          <input placeholder="Search Facebook" size="50" style="margin-top:5px;"><button><span class="glyphicon glyphicon-search"</span></button>
+</div>
+</div>
+        </div>
+
+      
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+   <div class="head">
+      
+      <ul class="nav navbar-nav navbar-right">
+       <li class="arsh">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsy2UQe_VduHu9UzaBBdrkldCcSq7NH3jvfXVYcvJj8cxvRRX" width="24px" height="24px">
+         <span class="white-text">Navneet</span>
+
+    </li>
+      <li><a href="#"class="white-text">Home</a></li>  
+    <li><a href="#"class="white-text">Find friends</a></li>  
+    
+  
+    <li><a href="#"class="white-text"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+    <li><a href="#"class="white-text"><span class="glyphicon glyphicon-envelope" aria-hidden="true"><span class="badge">2</span></span></a></li>
+    <li><a href="#"class="white-text"><span class="glyphicon glyphicon-globe" aria-hidden="true"><span class="badge">3</span></span></a></li>
+    <li><a href="#"class="white-text"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
+
+    
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Create page</a></li>
+              <li role="seperator" class="divider"></li>
+            <li><a href="#">Create Group</a></li>
+            <li><a href="#">Your Groups</a></li>
+             <li role="seperator" class="divider"></li>
+            <li><a href="#">Create Adverts</a></li>
+             <li><a href="#">Advertising on Facebook</a></li>
+            
+            <li role="separator" class="divider"></li>
+
+            <li><a href="#">Activity Log</a></li>
+
+            <li><a href="#">News Feed Preferences</a></li>
+
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </div>
+      </ul>
+
+    </div>
+    <!-- /.navbar-collapse -->
+
+
+</nav>
+</div>
+</header>
+<!-- end of header -->
+<!-- start of row -->
+      <div class="row">
+       
+       <div class="hidden-xs col-sm-4 col-md-3">
+<div id="menu">
+  <!-- menu bar start -->
+ <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsy2UQe_VduHu9UzaBBdrkldCcSq7NH3jvfXVYcvJj8cxvRRX"width="30px" height="30px"><span>Navneet</span></a><li>
+          <li role="presentation"><a href="#"><img class="rain" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSssM1j3d1Cqom--IKI9h_CdX4EvpbVQeahAEgzO0z-M8dSaCaU"width="25px" height="25px"><span>NewsFeed    ...</span></a></li>
+          <li role="presentation"><a href="#"><img class="main" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSOp45VRhGuvJba_TRpMz3TTX8IK2HEQdGBMKLm3INQsPOaao"width="25px"height="25x"><span>Messenger</span>
+          </ul>
+          <ul class="nav nav-pills nav stacked">
+            <p class="list-heading">SHORTCUTS</p>
+          <li role="presentation"><a href="#"><img  class="main" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQovdBmuQ3zFa4yHXbUSRqshByyJU5nAshrJi2i4Wp3cBXDYuMH"width="25px"height="25px"><span>Sandeep Maheshwari</span></a></li>
+          <li role="presentation"><a href="#"><img class="ops" src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-1/p200x200/18194906_1478385965525057_8301280583369287061_n.jpg?oh=285fe739399360848b5d1082eb00ed58&oe=59CA9064"width="25px"height="25px"><span>Fashion World</span></a></li>
+</ul>
+<!-- part 2 -->
+
+           <ul class="nav nav-pills nav-stacked">
+            <p class="list-heading">EXPLORE</p>
+              <li role="presentation"><a href="#"><img class="joke" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy2HWJSjkGNB4vBcgbzgDxz6v8eMsW8TkZzXtfPUSEWJPAiJUNMg" width="25px" height="25px"><span>Groups</span></a></li>
+         
+          <li role="presentation"><a href="#"><img class="wind"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtbrRVjz9y3qNvf9WROgSJN6S_PVrIwzo08Gr4NqMK1tdyBQe5"width="25px"height="25px"><span>Events</span></a></li>
+           <li role="presentation"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH2Zi8UTwsmfDosVqJIPWEJDXl0ycF527Jkj8SaBebRtyWKQPcRA" width="25px"height="25px"><span>Friend List</span></a></li>
+              <li role="presentation"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxLSJVSXw-sIg30-jLIiNaoHxV4zCRQ4wNYGXrqup3bmIkENIC"width="25px"height="25px"><span>Games</span></a></li>
+              <li role="presentation"><a href="#"><span class="blue">See more.....</span></a></li>
+          
+        </ul>
+</div>
+</div>
+<!-- main col start -->
+<div class="col-xs-12 col-sm-8 col-md-6">
+          <div id="main">
+            <!-- post creation -->
+            <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><img src="data:image/png;base64,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"width="20px"height="20px"><span style="font-size:15px";>Create a Post<span style=" color:blue;margin-left:20px";></span><span class="glyphicon glyphicon-picture"></span>Photo/VedioAlbum</h3>
+  </div>
+  <div class="panel-body">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsy2UQe_VduHu9UzaBBdrkldCcSq7NH3jvfXVYcvJj8cxvRRX"width="35px"height="35px"><span style="color:#808080"> What's on your mind ?</span>
+  </div>
+  <div class="panel-footer"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_haCnG6mSA8rwHZXp9pZaYfy4aMS2CJbZYiKzQYdwEGUrHiN6"width="20px"height="20px">Felling/Activity<span style="margin-left:30px";><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROfsSwov6TE9dl_bgsVd3BR-wChHPEnqFRyL3mg9Pd2Zoj4Tj8ww"width="30px"height="30px">Photo/Vedio</span></div>
+</div>
+            <!-- end of post -->
+
+            <!-- first panel -->
+<div class="panel panel-default">
+
+<div class="panel-heading">
+  
+<h3 class="panel-title"><a href="#"><img  class="women"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsy2UQe_VduHu9UzaBBdrkldCcSq7NH3jvfXVYcvJj8cxvRRX"width="40px"height="40px"><span style="color:#365899;font-weight:bold">Navneet Sandhu</span><span> added a new photo </span></a></h3>
+<p>#Beauty in their quotes </br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_haCnG6mSA8rwHZXp9pZaYfy4aMS2CJbZYiKzQYdwEGUrHiN6"width="20px"height="20px">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_haCnG6mSA8rwHZXp9pZaYfy4aMS2CJbZYiKzQYdwEGUrHiN6"width="20px"height="20px"></P>                           </div>
+<div class="panel-body"> 
+<div>
+<blockquote>
+<p>All men who have turned out worth anything have had the chief hand in their own education.</p>
+<footer>Walter Scott</footer>
+</blockquote>
+</div>
+<div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+<span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+<span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+</div>
+</div>
+<div class="panel-footer">
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS02hvHdAoKNCLeVLIM477ppzBvBbIf-DBvPj7vly8Pl4pUIahzWA"width="32px"height="32px">
+</a>
+</div>
+<div class="media-body">
+<p class="comment"> <span><a href="#">Kirat</a></span> This was insightfull!! </p>
+<div> 
+<small>
+<span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px"><span> .20min </span></span></a></span>
+</small>
+</div>
+
+</div>
+</div>
+<div class="media">
+<div class="media-left">
+<a href="#">
+<img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIwNL7I9gQp5CDqCiV92pkTj4kvRxSLIglrDxE2oCK8EqdDw0"width="32px"height="32px">
+</a>
+</div>
+<div class="media-body">
+<p class="comment"> <span><a href="#">Arsh</a></span> Wonderfull!! </p>
+<div> 
+<small>
+<span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer"></span><span>.Reply</span><span> .25min </span></a></span>
+</small>
+</div>
+
+</div>
+</div>
+
+<div>
+
+  <input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+</div>
+</div>
+</div>
+<!-- second panel -->
+     <div class="panel panel-default">
+  <div class="panel-heading"><img  class="bill"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYiBEBZ4CAe-cCZ2KjjHMYkycwcglo5X8S62yGePAZis2y5hSJ" width="40px" height="40px"><span style="color:#365899;font-weight:bold">Gurdeep</span><span> shared a Sandeep Maheshwari Quotes </span></a></h3>
+    <p>#REALITY OF LIFE#.....</br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eOkg2uq6vI1oE4awpWVaKhv8gKr26r6FyHVrEd7kTA8L9icdzg"width="20px"height="20px">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eOkg2uq6vI1oE4awpWVaKhv8gKr26r6FyHVrEd7kTA8L9icdzg"width="20px"height="20px">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eOkg2uq6vI1oE4awpWVaKhv8gKr26r6FyHVrEd7kTA8L9icdzg"width="20px"height="20px"></p>
+
+  </div>
+<div class="panel-body">
+<div class="image-post">
+        <img src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-9/19756838_246218265894962_6096387043250746228_n.jpg?oh=e8508d86e65e68ebfa0387719df2a7ae&oe=5A0D6019" width="100%" class="img-responsive" alt="Responsive image">
+    </div> 
+  
+     <div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+        <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+          <span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+ </div>
+  <div class="panel-footer">
+
+          <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDH80DEwrrorb90qe7AlME0cMY_OoXXj15EGTOl5FUmbbQjKmA"width="32px" height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"> <span><a href="#">Sherry </a></span> Soo...nice lines </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px">.30min</span></a></span>
+</small>
+</div>
+    
+  </div>
+</div>
+ <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0NlV673DZHU8dhpfuRNQbl6KQvvCalNhZX-PiHlFagHX-8ndgMA"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"> <span><a href="#">Gurii</a></span> yahh..realyy gooood </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply</span><span class="we">.33min</span></a></span>
+</small>
+</div>
+</div>  
+  <!-- next comment -->
+  <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBpnb7uyh2SpgXf5YDjcXgoYSrxjTbYh3JI_HfH6o7JTUr1QO"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"> <span><a href="#">Mehtab Virk</a></span> Sooooo..cutee baby </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply</span><span class="we">.1hr</span></a></span>
+</small>
+</div>
+</div> 
+</div> 
+
+  <!-- end of next comment -->
+  
+<div>
+<input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+ </div>
+</div>
+</div>
+</div>
+
+<!-- third panel -->
+                     <div class="panel panel-default">
+                      <div class="panel-heading">
+                     <img class="nim"src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-1/p200x200/17861927_1470627016320766_995606873960237908_n.jpg?oh=ba16ddec075b08cdc582d389fb74cc74&oe=59C99653"width="40px"height="40px"><span style="color:#365899;font-weight:bold">Neha</span><span> shared the vedio with Simran</span></a></h3>
+                     <p>Wah ji wah kamal krdita</br>
+                      share the vedio plzz<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYdcIkgI9yjGSnUHNF8MgmoAKbNUyIqAdyF6SMclO01yE00903"width="20px"height="20px">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYdcIkgI9yjGSnUHNF8MgmoAKbNUyIqAdyF6SMclO01yE00903"width="20px"height="20px">
+                    </P>
+
+                      </div>
+                    <div class="panel-body">
+  <div class="media-body">
+    <!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YsNMyNXspVc" frameborder="0" allowfullscreen></iframe> 
+</div>
+<div class="ten">
+ <div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+        <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+          <span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+    </div>
+   </div>
+</div>
+    
+
+<div class="panel-footer">
+ <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPeMfJWdSIj7HWUSvhvVRNLQYaKWIQvfOMsXBBVrMcjsRzgfSp"width="32px"height="32px">
+    </a>
+  </div>
+
+  <div class="media-body">
+   <p class="comment"> <span><a href="#">pAVii</a></span> Big fan of uu... </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px">.4min</span></a></span>
+
+</small>
+</div>
+   </div> 
+   <!-- nested comment-1 -->
+    <div class="media">
+        <div class="media-left">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8v0W9wMbYm2iMmUdKVPfOQkaciVVYKutNO9m_AK2fnfH_oH49" class="media-object" style="width:32px">
+        </div>
+        <div class="media-body">
+          <div class="media-heading">Ranjit singh </div>
+          <p>Fantastic song....nyccc!!big big big fan of uuu</p>
+           <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px">.45min</span></a></span>
+</small>
+</div>
+
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNNBG4s5pxGiGLmm4OHA9yMr7KxSwuPGQnNgdwvW4F42-b-pxlng" class="media-object" style="width:32px">
+            </div>
+            <div class="media-body">
+              <div class="media-heading">John Doe </div>
+              <p>Lorem ipsum dolor sit amet, consectetur @@.</p>
+                <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px"><span> 20min </span></span></a></span>
+</small>
+</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Nested media object -->
+        
+
+<!-- end of 1 -->
+<div>
+<input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+ </div>
+</div>
+</div>     
+</div>
+</div>
+
+      <!-- fouth panel -->
+                       <div class="panel panel-default">
+                              <div class="panel-heading">
+                                <h3 class="panel-title"><a href="#"><img class="name" src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-1/p200x200/18486110_125454758018605_8050639378931783398_n.png?oh=22cdc7919acad8c1ebd9e03c1b4104c1&oe=5A04181A"width="40px"height="40px"><span style="color:#365899;font-weight:bold">Shipra Khanna</span> share the The Enginer Bro</span></a></h3>
+                              </div>
+                              <div class="panel-body"> 
+                              <div class="image-post">
+                                <img src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-0/s640x640/19756803_1541829939209120_54264943884280385_n.jpg?oh=ab176d870d7341e8a3f6e6a9a1eab9a3&oe=59CDA64C"width="100%">
+
+                              </div>
+                                 <div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+                                    <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+                                   <span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+                                </div>
+                             </div>
+                              <div class="panel-footer">
+                              <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ5-ZjF3PhOxAs5YkZgbHe8YeRy1fg_X_5JwZoFt5e4pxriQC8"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"><span><a href="#">NaV Bajwa</a></span> Realyyy?? </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px">.2min</span></a></span>
+</small>
+</div>
+    
+  </div>
+</div>
+ <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_iMauloHJxy_CBEDErh68wG3Mvfloo_B0NmtvO-povZdaCncO7g"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"><span><a href="#">Riya</a></span> Yahhh.. realyyy </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span><a href="#"><span class="rer">.Reply<span class="we">.50min</span></span></a></span>
+</small>
+</div>
+ </div>   
+  </div>
+
+<div>
+<input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+                  </div>
+                  </div>
+                  </div>
+                </div>
+
+                  <!-- fifth panel -->
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"><a href="#"><img  class="man"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA_pEym9uN7SP29QAHdsp6XWpT5j5-RCxUULLcU0TLL1stUFjT" width="40px" height="40px"><span style="color:#365899;font-weight:bold">Alia bhatt Fan's</span> added a photo::felling happy </a></h3>
+
+<p>Thank you soo much...</br>Love uu FANES/.....
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjeUuub9YOT06gdmaaUfAPDTkvKNZ2TXrMqLIuTi8_j65SOti"width="20px"height="20px"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpjeUuub9YOT06gdmaaUfAPDTkvKNZ2TXrMqLIuTi8_j65SOti"width="20px"height="20px"></p>
+</div>
+<div class="panel-body"> 
+<div class="image-post">
+<img src="https://scontent.fdel2-1.fna.fbcdn.net/v/t1.0-0/p480x480/19642499_2028459014044238_664019460834927962_n.jpg?oh=79a37ebbd97ac93176d53a1a5b6c679f&oe=59D08756"width=100%>
+
+</div>
+<div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+  <span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+   <span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+</div>
+</div>
+<div class="panel-footer">
+<div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4E8It1ymF2is9Vm6cDU8-RfxQLfh2XSYeM7A6DlUgm_nwPMbq"width="32px"height="32px">
+                  </a>
+                </div>
+                <div class="media-body">
+                 <p class="comment"> <span><a href="#">Sakshi </a></span> Nice...pic </p>
+                  <div> 
+                    <small>
+                <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply</span><span class="we">.8min</span></span></a>
+              </small>
+              </div>
+                 
+                </div>
+              </div>
+               <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi8NkXeZPFWH8j2kYHX6Or-eTw6jEJkA2QR67BpDX0JH0CBzTu"width="32px"height="32px">
+                  </a>
+                </div>
+                <div class="media-body">
+                 <p class="comment"> <span><a href="#">Munisha</a></span> cute**Adorable.. </p>
+                  <div> 
+                    <small>
+                <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px">.45min</span></a></span>
+              </small>
+              </div>
+                  </div>
+                  <!-- nested comment -->
+                 
+              </ul>
+                
+              <!-- end of nested -->
+              <div>
+              <input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+                                          </div>
+              </div>
+                      
+                      </div>
+                      </div>          
+                          </div>   
+
+              <!--SIXTTH PANEL  -->
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"><img class="sun" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM-6a3BXl7nx3_f4xFZL58SS3qS9G8YOE3OyD2M1SlsWvBEiKl"width="32px"height="32px"><span style="color:#356899;font-weight:bold">Nature Beauty</span><span> added a photo with Balbir and Ravneet</h3>
+<p>Change yourself not the nature@@</br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhjDO_oAljMXJ7CYn54V9DWvvlo5DJPa7w0PeOl9hCw9yVIQ_7A"width="20px"height="20px">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhjDO_oAljMXJ7CYn54V9DWvvlo5DJPa7w0PeOl9hCw9yVIQ_7A"width="20px"height="20px"></p>
+</div>
+<div class="panel-body">
+<!-- start of sliding-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+<div class="item active">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SlOaNOq3r2oUZ5Mc9_SzKF8FZz2nKweGBP41jZl0Bu3E66NG"width="100%">
+</div>
+
+<div class="item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2xBNue_Thrj5LNY6gZO5BXqiJXuybBduqE9LnKPTA-bvp3WX" width="100%"height="100%">
+</div>
+
+<div class="item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqFLQlUi7SzFnNFfrm49uMc1VPa9hhdPLMPkFvbJAYqlcMjybT"width="100%">
+</div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<div class="nine">
+<div> <span><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Like</span>
+<span><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>Comment</span>
+<span><img class="get"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWArEJI1Vj8WNBMVuepEStG67t0kiPRgAdbcQI0k0bSzT1nR1bGA" width="15px"height="15px"></span><span>Share</span>
+</div>
+</div>
+<!-- end of wrapper slide -->
+  </div>
+  <div class="panel-footer"></div>
+  <!-- start of footer -->
+     <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyA3QZZ0aBO_nZsuVLnqm008hDp_g3X0TPeA1lUx056r3Ct7Qzzw"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+  <p class="comment"> <span><a href="#">Angel Prerna</a></span> wowwww..this is actually beauty </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer">.Reply<span class="we">.</span></span><span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrRGXCYuphPTkeyonWfVAJE_UsNMlWVHUp-WHlBEvmq7k5F2S8"width="15px"height="15px"><span> 20min </span></span></a></span>
+</small>
+</div>
+    
+  </div>
+</div>
+ <div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIwNL7I9gQp5CDqCiV92pkTj4kvRxSLIglrDxE2oCK8EqdDw0"width="32px"height="32px">
+    </a>
+  </div>
+  <div class="media-body">
+   <p class="comment"> <span><a href="#">Armann</a></span> It just like a living </p>
+    <div> 
+      <small>
+  <span> <a href="#">Like </a></span> <span> <a href="#"><span class="rer"></span><span>.Reply</span><span> .25min </span></a></span>
+</small>
+</div>
+    
+  </div>
+</div>
+
+<div>
+<input placeholder="Write a comment..." style="width: 100%;margin-top: 15px;">
+ </div>
+</div>
+</div>
+</div>
+  <!-- end of footer -->
+
+
+
+              <!-- END OF 6 -->
+
+<!-- next col -->
+                                              <div class="hidden-xs hidden-sm col-md-3">
+                                           <div id="sidebar">
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="ban">Trending</li>
+   
+        <li role="presentation" class="active"><a href="#top" aria-controls="home" role="tab" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq1avNOsz9o4nkoTw_ZuKehnCWqV5UiEpuMdrPAdWfZ5iniuq6kA"width="15px"height="15px"></a></li>
+        <li role="presentation"><a href="#politics" aria-controls="profile" role="tab" data-toggle="tab"><img class="ball" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjXUeuE0za4rSEB7dzKPybZtwA3nFKHU6k7hVZSXGdsRwracrByw"width="15px"height="15px"></a></li>
+        <li role="presentation"><a href="#sports" aria-controls="messages" role="tab" data-toggle="tab"><img class="hen"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxz3w6AUmFDnnpAS1vRNFE1EYzCth0JxouIRDEesMWz-51WS8ikg"width="15px"height="15px"></a></li>
+      <li role="presentation"><a href="#science" aria-controls="messages" role="tab" data-toggle="tab"><img class="noor"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRJjGF-caRw8W6rZP-VE1DH_azIzObtWV_VF1anjJ-h7S9vuZ"width="15px"height="15px"></a></li>
+      <li role="presentation"><a href="#Entertainment" aria-controls="messages" role="tab" data-toggle="tab"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtUdWnip5Mjf5zyIqJRcf0fEiUwpLQviodYmjgdvfxyTZZptGwNw"width="15px"height="15px"></a></li>
+    
+    
+    </ul>
+    <!-- Tab panes -->
+   <div class="tab-content">
+    <!-- for trends -->
+    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Virat kholi </span>
+    
+<p class="list-group-item-text"> Kohli breaks Tendulkar's record of most ODI centuries in chases ‑ cricket.yahoo.com </p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Xi jinping </span>
+    
+<p class="list-group-item-text"> 20 Live: Modi Takes Aim at Pak, Likens LeT, JeM to ISIS, Al-Qaeda ‑ in.news.yahoo.com</p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Narendera Modi </span>
+    
+<p class="list-group-item-text">India will implement Paris climate agreement: PM Modi at G20 ‑ hindustantimes.com</p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Indian Institues Of Technology </span>
+    
+<p class="list-group-item-text">Supreme Court stays IIT JEE counselling, next hearing on July 10 ‑ indianexpress.com</p>
+
+</div>
+
+
+<!-- for politics -->
+        <div role="tabpanel" class="tab-pane" id="politics">
+              <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Misa Bharti </span>
+        
+    <p class="list-group-item-text"> Enforcement Directorate raids premises linked to Misa Bharti in money… ‑ indianexpress.com</p>
+
+</div>
+    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> United Kingdom</span>
+        
+    <p class="list-group-item-text">Donald Trump says he WILL visit the UK ‑ dailymail.co.uk</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Narendera Modi </span>
+        
+    <p class="list-group-item-text">India will implement Paris climate agreement: PM Modi at G20 ‑ hindustantimes.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Syria  </span>
+        
+    <p class="list-group-item-text">Partial ceasefire deal reached in Syria, in Trump's first peace effort ‑ reuters.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Sikkim </span>
+        
+    <p class="list-group-item-text">India including tri-junction in standoff out of 'ulterior… ‑ economictimes.indiatimes.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Maharashtra Police </span>
+        
+    <p class="list-group-item-text">Now, Maharashtra Police To Get 'Beef Detection Kits' ‑ ndtv.com</p>
+
+</div>
+</div>
+            
+         <!-- for sports -->
+
+                          <div role="tabpanel" class="tab-pane" id="sports">
+                                <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Virat kholi </span>
+                          
+                      <p class="list-group-item-text"> Kohli breaks Tendulkar's record of most ODI centuries in chases ‑ cricket.yahoo.com </p>
+
+                  </div>
+                      <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> FIFA U-17 World cup </span>
+                          
+                      <p class="list-group-item-text">FIFA U-17 Football World Cup 2017 Draw: India to play USA in… ‑ indianexpress.com</p>
+
+                  </div>
+                    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Lionel Messi  </span>
+                          
+                      <p class="list-group-item-text">Lionel Messi gets extra fine for tax fraud, avoids prison ‑ indianexpress.com</p>
+
+                  </div>
+                    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Johanna Konta </span>
+                          
+                      <p class="list-group-item-text">Wimbledon 2017: Johanna Konta sails through to fourth round against Maria… ‑ express.co.uk</p>
+
+                  </div>
+                    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Sudan Football Association </span>
+                          
+                      <p class="list-group-item-text">FIFA’s Sudan ban disrupts African club tournaments ‑ indianexpress.com</p>
+
+                  </div>
+                    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Carlio Sainz </span>
+                          
+                      <p class="list-group-item-text">Carlos Sainz staying at Toro Rosso, says Christian Horner ‑ indianexpress.com</p>
+
+                  </div>
+                  </div>
+<!-- end of list heading -->
+<!-- for science -->
+
+<div role="tabpanel" class="tab-pane" id="science">
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Oracle Cooperation </span>
+    
+<p class="list-group-item-text">Oracle Opens First 'Digital Hub' In Asia Pacific Region In… ‑ profit.ndtv.com</p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Infosys </span>
+    
+<p class="list-group-item-text">Infosys strengthens partnership with Udacity… ‑ economictimes.indiatimes.com</p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Xiaomi </span>
+    
+<p class="list-group-item-text">Xiaomi India revenue up 3x in H1 2017… ‑ telecom.economictimes.indiatimes.com</p>
+
+</div>
+<div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Joel kaplan </span>
+    
+<p class="list-group-item-text">Facebook official meets Pakistan interior minister over… ‑ hindustantimes.com</p>
+
+</div>
+
+</div>
+   
+<!-- for entertainment -->
+   
+        <div role="tabpanel" class="tab-pane" id="Entertainment">
+              <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold" > Rahul Yadav </span>
+        
+    <p class="list-group-item-text">Rahul Yadav-Housing.com saga to find a home on the small screen ‑ moneycontrol.com </p>
+
+</div>
+    <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Jacqueline Fernandez </span>
+        
+    <p class="list-group-item-text">Sidharth Malhotra and Jacqueline Fernandez turn up the heat… ‑ timesofindia.indiatimes.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Amber heard </span>
+        
+    <p class="list-group-item-text">Aquaman actor Amber Heard posts never-before-seen picture from… ‑ indianexpress.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> MOM</span>
+        
+    <p class="list-group-item-text">Yahoo Movies Review: MOM ‑ in.style.yahoo.com</p>
+
+</div>
+  <div role="tabpanel" class="tab-pane active" id="top"><i class="fa fa-database" aria-hidden="true"></i><span style="color:#365899;font-weight:bold"> Anand Mahindra </span>
+        
+    <p class="list-group-item-text">Anand Mahindra apologises for sacking of IT employee ‑ thehindubusinessline.com</p>
+</div>
+</div>
+<!-- start of suggested pages -->
+<div class="ice">
+  <span style="color:#808080">Suggested Pages</span><span style="float:right;color:#365899"> See all </span>
+  <!-- start of sliding-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+<div class="item active">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDI5sRtFFCol4OTKbJUWHkkPU_lkTyYYWL3PKfrOsrhJllLrK1cA"width="100%">
+</div>
+
+<div class="item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmlsfaa_cH_EgzaLlkcnFVzkoE7tal9TBfv4wBxeRTpn2X8I_B7w" width="100%">
+</div>
+
+<div class="item">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiWABlYea-oxM_oL3etf4oK_a4gB6ixecLUCN3VqT7ReWxQn4"width="100%">
+</div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+
+</div>
+<div class="hot">
+<button>Like page</button> 
+</div>
+</div>
+<div class="rat">
+ <H6><span style="color:#808080";>English(US)</span><span style="color:#356899";>.English(UK) </span><span style="float:right";><button>+</button></span></h6>
+  </div>
+
+<!-- end of suggested pages -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <footer>
+    <ul class="nav nav-pills pull-right">
+      
+  <li role="presentation"><a href="#">.privacy</a></li>
+  <li role="presentation"><a href="#">.Terms</a></li>
+  <li role="presentation"><a href="#">.Advertising</a></li>
+
+  <li role="presentation"><a href="#">.Cookies</a></li>
+  <li role="presentation"><a href="#">.Copyright@</a></li>
+</ul>
+
+  </footer> 
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
